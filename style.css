@@ -1,0 +1,94 @@
+@import url('./styles.css');
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.auth-shell {
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  width: min(520px, 100%);
+  padding: 1.4rem;
+  animation: authFade 0.35s ease;
+}
+
+.auth-form {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.auth-form label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.auth-form input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(5, 12, 29, 0.65);
+  color: var(--text);
+  padding: 0.75rem 0.9rem;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.auth-form input:focus {
+  border-color: #9cbcff;
+  box-shadow: 0 0 0 3px rgba(122, 162, 255, 0.18);
+}
+
+.google-btn {
+  width: 100%;
+  margin-top: 0.9rem;
+}
+
+.toggle-text {
+  color: var(--muted);
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+.text-link {
+  border: 0;
+  background: transparent;
+  color: #9cbcff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-feedback {
+  text-align: center;
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.auth-feedback.error {
+  color: #ff9fa7;
+}
+
+.auth-feedback.success {
+  color: #9df0b7;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes authFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
