@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillX | EduNex AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-layer bg-layer--one"></div>
+    <div class="bg-layer bg-layer--two"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap glass-card">
+        <a class="brand" href="index.html">EduNex</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav" id="siteNav">
+          <a href="index.html#about">About</a>
+          <a href="index.html#provide">What We Provide</a>
+          <a href="courses.html">Courses</a>
+          <a href="index.html#community">Community</a>
+          <a href="auth.html" class="btn btn-small">Join</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section skillx-page">
+      <div class="container skillx-shell">
+        <section class="glass-card skillx-card" aria-labelledby="skillx-title">
+          <p class="eyebrow center">SkillX – Powered by EduNex</p>
+          <h1 id="skillx-title" class="center">AI for Skills &amp; Career Guidance</h1>
+
+          <div class="skillx-chat" id="skillxChat" aria-live="polite">
+            <div class="skillx-placeholder">Start a conversation with SkillX to explore skills and career guidance.</div>
+          </div>
+
+          <form class="skillx-input-wrap" id="skillxForm">
+            <label for="skillxInput" class="sr-only">Type your message</label>
+            <input id="skillxInput" type="text" placeholder="Ask SkillX about skills, careers, or learning plans..." maxlength="280" required />
+            <button type="submit" class="btn btn-small">Send</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <h3>EduNex</h3>
+          <p>Email: <a href="mailto:theedunex@gmail.com">theedunex@gmail.com</a></p>
+        </div>
+        <div class="socials">
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
