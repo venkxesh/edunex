@@ -70,6 +70,7 @@ const submitAuth = async (url, payload, successMessage) => {
     }
 
     setFeedback(successMessage, 'success');
+    window.location.href = "comingsoon.html";
   } catch (error) {
     setFeedback(error.message || 'Something went wrong. Please try again.');
   }
@@ -97,6 +98,7 @@ if (signupForm) {
       return;
     }
 
+    await submitAuth('/signup', { name, email, password }, 'Signup successful! Redirecting...');
     await submitAuth('/signup', { name, email, password }, 'Signup successful! You can now login.');
   });
 }
@@ -118,5 +120,28 @@ if (loginForm) {
     }
 
     await submitAuth('/login', { email, password }, 'Login successful! Redirecting...');
+  });
+}
+
+// SkillX frontend chat UI (no backend)
+const skillxForm = document.getElementById('skillxForm');
+const skillxInput = document.getElementById('skillxInput');
+const skillxChat = document.getElementById('skillxChat');
+
+if (skillxForm && skillxInput && skillxChat) {
+  skillxForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const text = skillxInput.value.trim();
+    if (!text) return;
+
+    const placeholder = skillxChat.querySelector('.skillx-placeholder');
+    if (placeholder) placeholder.remove();
+
+    const bubble = document.createElement('div');
+    bubble.className = 'skillx-message user';
+    bubble.textContent = text;
+    skillxChat.appendChild(bubble);
+    skillxChat.scrollTop = skillxChat.scrollHeight;
+    skillxInput.value = '';
   });
 }
