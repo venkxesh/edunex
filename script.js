@@ -70,7 +70,6 @@ const submitAuth = async (url, payload, successMessage) => {
     }
 
     setFeedback(successMessage, 'success');
-    window.location.href = "comingsoon.html";
   } catch (error) {
     setFeedback(error.message || 'Something went wrong. Please try again.');
   }
@@ -98,7 +97,7 @@ if (signupForm) {
       return;
     }
 
-    await submitAuth('/signup', { name, email, password }, 'Signup successful! Redirecting...');
+    await submitAuth('/signup', { name, email, password }, 'Signup successful! You can now login.');
   });
 }
 
