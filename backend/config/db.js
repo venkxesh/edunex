@@ -1,14 +1,11 @@
-// MongoDB connection helper using Mongoose.
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    // eslint-disable-next-line no-console
-    console.log('MongoDB connected successfully');
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('MongoDB connection failed:', error.message);
+    console.log("MongoDB Connected");
+  } catch (err) {
+    console.error(err.message);
     process.exit(1);
   }
 };
