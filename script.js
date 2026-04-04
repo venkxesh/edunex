@@ -99,7 +99,6 @@ if (signupForm) {
     }
 
     await submitAuth('/signup', { name, email, password }, 'Signup successful! Redirecting...');
-    await submitAuth('/signup', { name, email, password }, 'Signup successful! You can now login.');
   });
 }
 
