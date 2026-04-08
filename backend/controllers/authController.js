@@ -12,3 +12,11 @@ exports.signup = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+exports.login = async (req, res) => {
+  try {
+    res.json({ message: "Login working" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
