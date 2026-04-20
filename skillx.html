@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillX | EduNex AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="skillx-fullscreen-page">
+    <div class="bg-layer bg-layer--one"></div>
+    <div class="bg-layer bg-layer--two"></div>
+
+    <main class="skillx-fullscreen">
+      <section class="skillx-fullscreen-shell" aria-labelledby="skillxTitle">
+        <header class="skillx-topbar glass-card">
+          <div>
+            <p class="eyebrow">SkillX – Powered by EduNex</p>
+            <h1 id="skillxTitle">AI for Skills &amp; Career Guidance</h1>
+          </div>
+          <a href="index.html" class="btn btn-small">Back to Home</a>
+        </header>
+
+        <section class="skillx-chat-window glass-card" id="skillxMessages" aria-live="polite">
+          <article class="skillx-bubble ai">Hi! I’m SkillX. Ask me about skills, careers, and smart learning plans.</article>
+        </section>
+
+        <form id="skillxChatForm" class="skillx-input-bar glass-card">
+          <label for="skillxPrompt" class="sr-only">Type your message</label>
+          <input
+            id="skillxPrompt"
+            type="text"
+            placeholder="Ask SkillX anything about your learning journey..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="skillx.js"></script>
+  </body>
+</html>
