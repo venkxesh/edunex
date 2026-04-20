@@ -84,12 +84,12 @@ if (signupForm) {
     const password = document.getElementById('signupPassword')?.value || '';
 
     if (!name || !email || !password) {
-      setFeedback('Please fill in all signup fields.');
+      setFeedback('Please fill in all signup fields. ;)');
       return;
     }
 
     if (!isValidEmail(email)) {
-      setFeedback('Please enter a valid email address.');
+      setFeedback('Please enter a valid email address.:)');
       return;
     }
 
@@ -98,7 +98,7 @@ if (signupForm) {
       return;
     }
 
-    await submitAuth('/signup', { name, email, password }, 'Signup successful! Redirecting...');
+   await submitAuth('https://edunex-xfv2.onrender.com/api/auth/signup', { name, email, password }, 'Signup successful! Redirecting...');
   });
 }
 
@@ -118,7 +118,7 @@ if (loginForm) {
       return;
     }
 
-    await submitAuth('/login', { email, password }, 'Login successful! Redirecting...');
+await submitAuth('https://edunex-xfv2.onrender.com/api/auth/login', { email, password }, 'Login successful! Redirecting...');
   });
 }
 

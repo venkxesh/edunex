@@ -12,39 +12,57 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="skillx-fullscreen-page">
+  <body>
     <div class="bg-layer bg-layer--one"></div>
     <div class="bg-layer bg-layer--two"></div>
 
-    <main class="skillx-fullscreen">
-      <section class="skillx-fullscreen-shell" aria-labelledby="skillxTitle">
-        <header class="skillx-topbar glass-card">
-          <div>
-            <p class="eyebrow">SkillX – Powered by EduNex</p>
-            <h1 id="skillxTitle">AI for Skills &amp; Career Guidance</h1>
+    <header class="site-header">
+      <div class="container nav-wrap glass-card">
+        <a class="brand" href="index.html">EduNex</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav" id="siteNav">
+          <a href="index.html#about">About</a>
+          <a href="index.html#provide">What We Provide</a>
+          <a href="courses.html">Courses</a>
+          <a href="index.html#community">Community</a>
+          <a href="auth.html" class="btn btn-small">Join</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section skillx-page">
+      <div class="container skillx-shell">
+        <section class="glass-card skillx-card" aria-labelledby="skillx-title">
+          <p class="eyebrow center">SkillX – Powered by EduNex</p>
+          <h1 id="skillx-title" class="center">AI for Skills &amp; Career Guidance</h1>
+
+          <div class="skillx-chat" id="skillxChat" aria-live="polite">
+            <div class="skillx-placeholder">Start a conversation with SkillX to explore skills and career guidance.</div>
           </div>
-          <a href="index.html" class="btn btn-small">Back to Home</a>
-        </header>
 
-        <section class="skillx-chat-window glass-card" id="skillxMessages" aria-live="polite">
-          <article class="skillx-bubble ai">Hi! I’m SkillX. Ask me about skills, careers, and smart learning plans.</article>
+          <form class="skillx-input-wrap" id="skillxForm">
+            <label for="skillxInput" class="sr-only">Type your message</label>
+            <input id="skillxInput" type="text" placeholder="Ask SkillX about skills, careers, or learning plans..." maxlength="280" required />
+            <button type="submit" class="btn btn-small">Send</button>
+          </form>
         </section>
-
-        <form id="skillxChatForm" class="skillx-input-bar glass-card">
-          <label for="skillxPrompt" class="sr-only">Type your message</label>
-          <input
-            id="skillxPrompt"
-            type="text"
-            placeholder="Ask SkillX anything about your learning journey..."
-            autocomplete="off"
-            required
-          />
-          <button type="submit" class="btn">Send</button>
-        </form>
-      </section>
+      </div>
     </main>
 
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <h3>EduNex</h3>
+          <p>Email: <a href="mailto:theedunex@gmail.com">theedunex@gmail.com</a></p>
+        </div>
+        <div class="socials">
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
-    <script src="skillx.js"></script>
   </body>
 </html>
