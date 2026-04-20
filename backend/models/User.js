@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+// User model for authentication and account storage.
+const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema(
   {
@@ -11,17 +12,17 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-      lowercase: true
+      lowercase: true,
+      trim: true
     },
     password: {
       type: String,
-      required: true,
-      minlength: 6
+      required: true
     }
   },
   {
-    timestamps: true
+    timestamps: { createdAt: true, updatedAt: false }
   }
 );
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model('User', userSchema);
